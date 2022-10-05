@@ -1,14 +1,3 @@
-
-
-footer{
-    display: none;
-
-}
-
-
-
-
-
 body{
     max-width: 767px;
     margin: auto;
@@ -17,14 +6,6 @@ body{
     flex-direction: column;
     align-items: center;
 }
-
-.main{
-    
-    border: solid red 1px;
-    
-}
-
-
 
 /*********HEADER*********/
 header{
@@ -116,37 +97,37 @@ header{
         box-shadow: 2px 3px 12px 4px rgb(236, 236, 236);
     }
 
-    .card__number{
-       background-color: #9356DC;
-       border-radius: 150px;
-       width: 17px;
-       padding: 8px;
-       position: absolute;
-      margin-left: -30px;
-       display: flex;
-       align-items: center;
-       justify-content: center;
-       color: white;  
-    }
+        .card__number{
+            background-color: #9356DC;
+            border-radius: 150px;
+            width: 17px;
+            padding: 8px;
+            position: absolute;
+            margin-left: -30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;  
+        }
 
-    h3{
-        margin-left:-10px;
-        font-size: 25px;
-        margin-bottom: 0px;
-        width: 100%;
-    }
+        h3{
+            margin-left:-10px;
+            font-size: 25px;
+            margin-bottom: 0px;
+            width: 100%;
+        }
 
-    .card__text{
-        font-weight: bold;
-        font-size: 18px;
-    }
+        .card__text{
+            font-weight: bold;
+            font-size: 18px;
+        }
 
-/*********SECTION 3*********/ 
+/*********SECTION 4*********/ 
 .section_4{
    width: 100%;
     display: flex;
     flex-direction: column;
-    background-color:rgb(242, 242, 242) ;
+    background-color:#f6f6f6;
     align-items: center;
     gap: 20px;
     padding-top: 30px;
@@ -164,7 +145,8 @@ header{
         height: 270px;
         background-color: white;
         border-radius: 20px;
-
+        text-decoration: none;
+        color: black;
     }
 
         .section_4_card__image{
@@ -180,6 +162,7 @@ header{
             display: flex;
             justify-content: space-between;
             padding: 15px;
+
         }
 
             .cardinfos__txt{
@@ -187,6 +170,7 @@ header{
                 flex-direction: column;
                 justify-content: center;
                 gap: 7px;
+
             }
 
                 .txt__restoname{
@@ -197,3 +181,52 @@ header{
                 width: 20px;
                 fill: #9356DC;
             }
+
+            .card__nouveau{
+                position: absolute;
+                color: #3b8468;
+                background-color: #a9e0d1;
+                padding: 8px 16px 8px 16px;
+                align-self: flex-end;
+                margin-top:15px;
+                margin-right:15px;
+                border-radius: 3px;
+                font-weight: 500;
+            }
+
+/*********FOOTER*********/             
+footer{
+width: 100%;
+display: flex;
+flex-direction: column;
+padding-bottom: 20px;
+background-color: #353535;
+}
+
+    .footer__logo_marque{
+        filter: invert(100%) sepia(33%) saturate(0%) hue-rotate(328deg) brightness(107%) contrast(101%);       
+        width: 120px;
+        padding: 35px 0px 0px 35px;
+        color: white;
+        text-decoration: none;
+    }
+
+    nav ul{
+      list-style-type: none;
+    }
+    nav li{
+        padding: 5px;
+    }
+        .footer__logos{
+            width: 12px;
+            filter: invert(100%) sepia(33%) saturate(0%) hue-rotate(328deg) brightness(107%) contrast(101%);
+            margin-right: 3px;
+        }
+        
+        nav a{
+            color: white;
+            text-decoration: none;
+        }
+        nav a:hover{
+            text-decoration: underline;
+        }

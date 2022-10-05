@@ -7,6 +7,11 @@ body{
     align-items: center;
 }
 
+span{
+    font-size: 20px;
+    padding: 15px;
+}
+
 /*********HEADER*********/
 header{
     display: flex;
@@ -32,11 +37,6 @@ header{
     background-color: rgb(232, 232, 232);
 }
 
-    .icon{
-        width: 15px;
-        padding: 15px;
-    }
-
 /*********SECTION 2*********/
 .section_2{
     width: 100%;
@@ -45,8 +45,7 @@ header{
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 80px 0px 80px 0px;
-    gap: 30px;
+    padding: 40px 0px 60px 0px;
     background-color:rgb(242, 242, 242) ;
 }
 
@@ -62,6 +61,7 @@ header{
     .section_2__subtitle{
         font-size: 18px;
         font-weight: lighter;
+        margin-bottom: 30px;
     }
 
     .bouton_explorer{
@@ -71,6 +71,12 @@ header{
         padding: 15px 30px 15px 30px;
         color: white;
         background:linear-gradient(#FF79DA, #9356DC) ;
+        box-shadow: 2px 3px 12px 4px rgb(220, 220, 220);
+        transition: 0.3s ease-in-out;
+    }
+    .bouton_explorer:hover{
+        filter: brightness(1.1);
+        box-shadow: 2px 10px 20px 0px rgb(188, 188, 188);    
     }
 
 /*********SECTION 3*********/
@@ -122,6 +128,10 @@ header{
             font-size: 18px;
         }
 
+        .section_3__icon{
+            color: gray;
+        }
+
 /*********SECTION 4*********/ 
 .section_4{
    width: 100%;
@@ -147,6 +157,12 @@ header{
         border-radius: 20px;
         text-decoration: none;
         color: black;
+        box-shadow: 2px 3px 12px 4px rgb(236, 236, 236);
+        transition:0.3s ease-in-out ;
+    }
+    .section_4__card:hover{
+        filter:brightness(1.1) ;
+        box-shadow: 4px 6px 12px 8px rgb(203, 203, 203);
     }
 
         .section_4_card__image{
@@ -170,22 +186,32 @@ header{
                 flex-direction: column;
                 justify-content: center;
                 gap: 7px;
-
             }
 
                 .txt__restoname{
                     font-weight: bold;
                 }
-
-            .logo-favs{
-                width: 20px;
-                fill: #9356DC;
-            }
+                
+                .fa-heart{  
+                   color: gray; 
+                }
+                .fa-heart:hover{
+                    background: -webkit-linear-gradient(#FF79DA , #9356DC );
+                    background: -moz-linear-gradient(#FF79DA ,  #9356DC );
+                    background: linear-gradient(#FF79DA , #9356DC );
+                    -webkit-background-clip: text;
+                    -moz-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent; 
+                                 
+                    
+                    
+                }
 
             .card__nouveau{
                 position: absolute;
                 color: #3b8468;
-                background-color: #a9e0d1;
+                background-color: #99E2D0;
                 padding: 8px 16px 8px 16px;
                 align-self: flex-end;
                 margin-top:15px;

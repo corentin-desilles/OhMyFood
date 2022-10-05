@@ -1,0 +1,199 @@
+
+
+footer{
+    display: none;
+
+}
+
+
+
+
+
+body{
+    max-width: 767px;
+    margin: auto;
+    font-family: roboto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main{
+    
+    border: solid red 1px;
+    
+}
+
+
+
+/*********HEADER*********/
+header{
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    width: 100%;
+}
+
+    .logo_ohmyfood{
+        width: 200px;
+        padding: 15px;
+    }
+
+/*********SECTION 1*********/
+.section_1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 600;
+    padding:10px 0px 10px 0px ;
+    width: 100%;
+    background-color: rgb(232, 232, 232);
+}
+
+    .icon{
+        width: 15px;
+        padding: 15px;
+    }
+
+/*********SECTION 2*********/
+.section_2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 0px 80px 0px;
+    gap: 30px;
+    background-color:rgb(242, 242, 242) ;
+}
+
+     .section_2__title, .section_2__subtitle{
+        padding: 15px;
+    }  
+
+    .section_2__title{
+        font-size: 25px;
+        font-weight: 600;
+    }
+
+    .section_2__subtitle{
+        font-size: 18px;
+        font-weight: lighter;
+    }
+
+    .bouton_explorer{
+        text-decoration: none;
+        color: black;
+        border-radius: 40px;
+        padding: 15px 30px 15px 30px;
+        color: white;
+        background:linear-gradient(#FF79DA, #9356DC) ;
+    }
+
+/*********SECTION 3*********/
+.section_3{
+    padding: 0px 15px 0px 15px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top:30px ;
+    margin-bottom: 50px;
+
+}
+
+    .section_3__card{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;      
+        padding: 18px 15px 18px 15px; 
+        border-radius: 15px;
+        background-color: rgba(247, 247, 247, 0.961);
+        box-shadow: 2px 3px 12px 4px rgb(236, 236, 236);
+    }
+
+    .card__number{
+       background-color: #9356DC;
+       border-radius: 150px;
+       width: 17px;
+       padding: 8px;
+       position: absolute;
+      margin-left: -30px;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       color: white;  
+    }
+
+    h3{
+        margin-left:-10px;
+        font-size: 25px;
+        margin-bottom: 0px;
+        width: 100%;
+    }
+
+    .card__text{
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+/*********SECTION 3*********/ 
+.section_4{
+   width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(242, 242, 242) ;
+    align-items: center;
+    gap: 20px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+    .section_4__title{
+        width: 90%;
+    }
+
+    .section_4__card{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 270px;
+        background-color: white;
+        border-radius: 20px;
+
+    }
+
+        .section_4_card__image{
+            width: 100%;
+            display: flex;
+            object-fit: cover;
+            height: 68%;
+            border-radius: 20px 20px 0px 0px;
+        }
+
+        .section_4__cardinfos{
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+        }
+
+            .cardinfos__txt{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 7px;
+            }
+
+                .txt__restoname{
+                    font-weight: bold;
+                }
+
+            .logo-favs{
+                width: 20px;
+                fill: #9356DC;
+            }

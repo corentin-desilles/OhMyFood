@@ -5,15 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="projet3.css">
-    <title>ohmyfood !</title>
+    <title>ohmyfood! - Accueil</title>
 </head>
 <body>
     
 <header>
     <img alt="logo_ohmyfood" class="logo_ohmyfood" src="images/logo/ohmyfood.png">
 </header>
-
-<section class="main">
     
     <section class="section_1">
         <img alt="logo_adresse"  class="icon" src="images/logo/location-dot-solid.svg">
@@ -23,8 +21,8 @@
 
     <section class="section_2">
         <div class="section_2__title">Réservez le menu qui vous convient</div>
-        <div class="section_2_subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins</div>
-        <button>Explorer nos restaurants</button>
+        <div class="section_2__subtitle">Découvrez des restaurants d'exception, séléctionnés par nos soins</div>
+        <a class="bouton_explorer" href="#">Explorer nos restaurants</a>
     </section>      
 
 
@@ -34,64 +32,74 @@
         <div class="section_3__card">
             <div class="card__number">1</div>
             <img alt="logo_phone" class="icon" src="images/logo/mobile-screen-button-solid.svg">
-            <div>Choisissez un restaurant</div>
+            <div class="card__text">Choisissez un restaurant</div>
         </div>
 
         <div class="section_3__card">
             <div class="card__number">2</div>
             <img alt="logo_menu" class="icon" src="images/logo/list-solid.svg">
-            <div>Composez votre menu</div>
+            <div class="card__text">Composez votre menu</div>
         </div>
 
         <div class="section_3__card">
             <div class="card__number">3</div>
             <img alt="logo_shop" class="icon" src="images/logo/store-solid.svg">
-            <div>Dégustez au restaurant</div>
+            <div class="card__text">Dégustez au restaurant</div>
         </div>
     </section>
     
     
     <section class="section_4">
-        <h3>Restaurants</h3>
+        <h3 class="section_4__title">Restaurants</h3>
 
-        <a class="section_4__card">
+        <a href="#" class="section_4__card">
             <img alt="photo_plat" class="section_4_card__image" src="images/restaurants/resto_palette.jpg">
-            <div class="section_4__carddesctiption">
-                <div>La palette du goût</div>
-                <div>Ménilmontant</div>
-                <img>
+            <div class="card__nouveau">Nouveau</div>
+            <div class="section_4__cardinfos">
+                <div class="cardinfos__txt">
+                    <div class="txt__restoname">La palette du goût</div>
+                    <div>Ménilmontant</div>
+                </div>
+                <img alt="logo_favoris" class="logo-favs" src="images/logo/heart-regular.svg">            
             </div>
         </a>
 
-        <a class="section_4__card">
+        <a href="#" class="section_4__card">
             <img alt="photo_plat" class="section_4_card__image" src="images/restaurants/resto_enchentee.jpg">
-            <div class="section_4__carddesctiption">
-                <div>La note enchantée</div>
-                <div>Charonne</div>
-                <img>
+            <div class="card__nouveau">Nouveau</div>            
+            <div class="section_4__cardinfos">
+                <div class="cardinfos__txt">
+                    <div class="txt__restoname">La note enchantée</div>
+                    <div>Charonne</div>
+                </div>
+                <img alt="logo_favoris" class="logo-favs" src="images/logo/heart-regular.svg">
             </div>
         </a>
 
-        <a class="section_4__card">
+        <a href="#" class="section_4__card">
             <img alt="photo_plat" class="section_4_card__image" src="images/restaurants/resto_francaise.jpg">
-            <div class="section_4__carddesctiption">
-                <div>À la française</div>
-                <div>Cité Rouge</div>
-                <img>
+            <div class="section_4__cardinfos">
+                <div class="cardinfos__txt">
+                    <div class="txt__restoname">À la française</div>
+                    <div>Cité Rouge</div>
+                </div>
+                <img alt="logo_favoris" class="logo-favs" src="images/logo/heart-regular.svg">            
             </div>
         </a>
 
-        <a class="section_4__card">
+        <a href="#" class="section_4__card">
             <img alt="photo_plat" class="section_4_card__image" src="images/restaurants/resto_delice.jpg">
-            <div class="section_4__carddesctiption">
-                <div>Le délice des sens</div>
-                <div>Folie-Méricourt</div>
-                <img>
+            <div class="section_4__cardinfos">
+                <div class="cardinfos__txt">
+                    <div class="txt__restoname">Le délice des sens</div>
+                    <div>Folie-Méricourt</div>
+                </div>
+                <img alt="logo_favoris" class="logo-favs" src="images/logo/heart-regular.svg">            
             </div>
         </a>
     </section>
 
-</section>
+
 
 
 <footer>
@@ -99,21 +107,21 @@
     <nav>
         <ul>
             <li>
-                <img alt="logo_ustensiles" class="footer_logos" src="images/logo/utensils-solid.svg">
-                <a>Proposer un restaurant</a>
+                <img alt="logo_ustensiles" class="footer__logos" src="images/logo/utensils-solid.svg">
+                <a href="#">Proposer un restaurant</a>
             </li>
 
             <li>
-                <img alt="logo_partenaire" class="footer_logos" src="images/logo/pen-to-square-solid.svg">
-                <a>Devenir patenaire</a>
+                <img alt="logo_partenaire" class="footer__logos" src="images/logo/pen-to-square-solid.svg">
+                <a href="#">Devenir patenaire</a>
             </li>
 
-            <li><a>Mentions légales</a></li>
+            <li><a href="#">Mentions légales</a></li>
             
-            <li><a>Contact</a></li>
+            <li><a href="#">Contact</a></li>
         </ul>
     </nav>
 </footer>
 
 </body>
-</html>
+</html

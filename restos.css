@@ -101,18 +101,25 @@ main{
         display: flex;
         justify-content: space-between;
         padding: 10px;
-
+        gap: 10px;
     }
 
+    .menu_card__plat_card, .menu_infos, .plat_card__txt, .txt__title, .txt__subtitle{
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
 
         .txt__title{
             font-weight: bold;
             padding: 3px;
+            text-overflow: ellipsis;
         }
         .txt__subtitle{
             color:#434343 ;
             padding: 3px;
-
+            text-overflow: ellipsis;          
+            overflow: hidden;
         }
 
         .plat_card__prix{
@@ -122,12 +129,7 @@ main{
             margin-right: 15px;
         }    
         
-
-
-       
-       
-       
-       
+/***effet check***/       
 .effet_check{
     background: #99e2d0;
     cursor: pointer;
@@ -143,7 +145,7 @@ main{
         
 .menu_card__plat_card:hover .effet_check {
     opacity: 100%;
-    width: 15%;
+    width: 20%;
 }
 
 .menu_card__plat_card .effet_check .fa-circle-check{
@@ -175,6 +177,7 @@ main{
         transition: 0.3s ease-in-out;
         align-self: center;
         margin-bottom: 40px;
+        margin-top: 40px;
 }
 .bouton_commander:hover{
     filter: brightness(1.1);
@@ -217,4 +220,46 @@ footer{
             nav a:hover{
                 text-decoration: underline;
             }
+    
+/*********SCREEN*********/  
+@media screen and (min-width:768px) and (max-width:1150px) {
+body{
+    min-width: 768px;
+    max-width: 1150px;
+}
+
+.menu_card{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+    .menu_card__plat_card{
+    width: 49%;
+    }
+
+    .menu_card__title{
+        width: 100%;
+    }
+}
+
+/*********SCREEN*********/  
+@media screen and (min-width:1151px) {
+body{
+    min-width: 1151px;
+    max-width: none;
+}
+
+    .menu_card{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+        .menu_card__plat_card{
+        width: 32%;
+        }
+    
+        .menu_card__title{
+            width: 100%;
+        }
+    }
     

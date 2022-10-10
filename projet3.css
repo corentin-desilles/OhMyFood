@@ -16,7 +16,6 @@ span{
 header{
     display: flex;
     justify-content: center;
-    position: sticky;
     width: 100%;
 }
 
@@ -134,7 +133,7 @@ header{
 
 /*********SECTION 4*********/ 
 .section_4{
-   width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     background-color:#f6f6f6;
@@ -158,7 +157,7 @@ header{
         text-decoration: none;
         color: black;
         box-shadow: 2px 3px 12px 4px rgb(236, 236, 236);
-        transition:0.3s ease-in-out ;
+        transition:0.2s ease-in-out ;
     }
     .section_4__card:hover{
         filter:brightness(1.1) ;
@@ -192,21 +191,38 @@ header{
                     font-weight: bold;
                 }
                 
-                .fa-heart{  
-                   color: gray; 
+
+/***********A MODIFIER HOVER FAVORIS************/
+                .fa-heart-before{  
+                    
+                    color: gray;
+                    position: absolute;
+                    padding: 5px;
+                   
                 }
-                .fa-heart:hover{
+                .fa-heart-after{
+                 color: transparent;
+                 padding: 5px;
+            
+                   
+                }
+                
+                .fa-heart-before:hover ~ .fa-heart-after{
                     background: -webkit-linear-gradient(#FF79DA , #9356DC );
                     background: -moz-linear-gradient(#FF79DA ,  #9356DC );
                     background: linear-gradient(#FF79DA , #9356DC );
                     -webkit-background-clip: text;
                     -moz-background-clip: text;
                     background-clip: text;
-                    -webkit-text-fill-color: transparent; 
-                                 
-                    
-                    
+                    -webkit-text-fill-color: transparent;
+                    transform: scale(1.1);
                 }
+                .fa-heart-before:hover{
+                    display: none;
+                }
+/***********A MODIFIER HOVER FAVORIS************/
+
+
 
             .card__nouveau{
                 position: absolute;
@@ -256,3 +272,61 @@ background-color: #353535;
         nav a:hover{
             text-decoration: underline;
         }
+
+/*********SCREEN*********/             
+@media screen and (min-width:768px) and (max-width:1150px) {
+
+    body{
+        min-width: 768px;
+        max-width: 1150px;
+    }
+
+    .section_3{
+       flex-direction: row;
+       flex-wrap: wrap;
+       gap: 40px;
+    }
+    
+        .section_3__card{
+            width: 47%;
+        }
+            
+    .section_4{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }   
+
+        .section_4__card{
+            width: 45%;
+        }
+}
+
+/*********SCREEN*********/             
+@media screen and (min-width:1151px) {
+
+body{
+    min-width: 1151px;
+    max-width:none;
+}
+
+    .section_3{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 40px;
+     }
+     
+         .section_3__card{
+             width: 30%;
+         }
+
+         .section_4{
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+        }   
+    
+            .section_4__card{
+                width: 45%;
+            }
+    }

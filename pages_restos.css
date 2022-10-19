@@ -1,7 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700;900&family=Shrikhand&display=swap');
+
+@keyframes slideup {
+    from{
+        transform: translatey(20px);
+        opacity: 0%;
+    }
+    to{
+        transform: translatey(0px);
+        opacity: 100%;
+    }
+}
+
+@keyframes accueilAppear {
+    from{
+        transform: translatex(20px);
+        opacity: 0%;
+    }
+    to{
+        transform: translatex(0px);
+        opacity: 100%;
+    }
+}
+
 body{
     max-width: 767px;
     margin: auto;
-    font-family: roboto;
+    font-family: 'roboto', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,20 +38,36 @@ header{
     align-items: center;
     margin: auto;
     width: 100%;
+    padding: 15px 0px 15px 0px;
 }
 
     .logo_ohmyfood{
         width: 200px;
-        padding: 15px;
-        margin: auto;
+        position: absolute;
+        left:0;
+        right:0;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .lien_arrow_left{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: black;
     }
 
     .fa-arrow-left{
         font-size: 20px;
-        padding: 15px;
+        padding: 10px 10px 10px 20px;
         display: flex;
         left: 10px;
         color: black;
+    }
+
+    .accueil_display{
+        font-size: 25px;
+        display: none;
     }
    
 /********image********/
@@ -52,17 +93,31 @@ main{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    align-items:center;
+    padding-right:90px;
 }
 
     h2{
-        font-family:shrikhand;
-        margin-left: 15px;
+        font-family: 'Shrikhand', cursive;;
+        padding: 15px;
+        margin-top:50px;
     }
 
     .fa-heart{
-        font-size: 25px;
-        margin-right: 15px;
-    }
+        font-size:25px;
+        position: absolute;       
+    }  
+        .fa-heart-before{  
+            color: gray;
+        }
+        .fa-heart-after{
+            color: transparent;
+            transition:all 2s;
+        }
+        .fa-heart-after:hover{
+            background: linear-gradient(to bottom left, #9356dc, #ff79da);
+            -webkit-background-clip: text;
+        }   
 
 /***menu_card***/
 .menu_card{
@@ -94,7 +149,18 @@ main{
         display: flex;
         justify-content: space-between;
         box-shadow: 2px 3px 8px 4px rgb(236, 236, 236);
+        animation: slideup 1s forwards;
+            opacity:0;
     }
+
+    .animation1{    
+        animation-delay:calc(2s / 5);}    
+    .animation2{    
+        animation-delay:calc(3s / 5);}
+    .animation3{    
+        animation-delay:calc(4s / 5);}
+    .animation4{
+        animation-delay: calc(5s/5);}
 
     .menu_infos{
         width: 100%;
@@ -143,7 +209,7 @@ main{
     transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
         
-.menu_card__plat_card:hover .effet_check {
+.menu_card__plat_card:hover .effet_check{
     opacity: 100%;
     width: 20%;
 }
@@ -158,10 +224,6 @@ main{
 .menu_card__plat_card:hover .fa-circle-check{
     transform: rotate(0deg);
 }
-
-
-
-
 
 /***bouton***/
 .bouton_commander{
@@ -221,7 +283,7 @@ footer{
                 text-decoration: underline;
             }
     
-/*********SCREEN*********/  
+/*********FORMAT TABLETTE*********/  
 @media screen and (min-width:768px) and (max-width:1150px) {
 body{
     min-width: 768px;
@@ -232,21 +294,27 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
 }
-
     .menu_card__plat_card{
     width: 49%;
     }
+        .menu_card__title{
+            width: 100%;
+        }
+        .resto_titre{
+            justify-content:center;
+        }
 
-    .menu_card__title{
-        width: 100%;
+    .fa-arrow-left:hover +.accueil_display{
+        display: flex;
+        animation: accueilAppear 0.8s;
     }
 }
 
-/*********SCREEN*********/  
-@media screen and (min-width:1151px) {
+/*********FORMAT DESKTOP*********/  
+@media screen and (min-width:1151px) and (max-width:1349px) {
 body{
     min-width: 1151px;
-    max-width: none;
+    max-width: 1349px;
 }
 
     .menu_card{
@@ -256,10 +324,47 @@ body{
     
         .menu_card__plat_card{
         width: 32%;
-        }
-    
+        }   /*ADD*/
+
         .menu_card__title{
             width: 100%;
         }
+        .resto_titre{
+            justify-content:center;
+        }    
+
+        .fa-arrow-left:hover +.accueil_display{
+            display: flex;
+            animation: accueilAppear 0.8s;
+        }
+}
+
+/*********FORMAT DESKTOP MAIN NE GRANDIT PLUS*********/  
+@media screen and (min-width:1350px) {
+body{
+    max-width: none;
+}    
+
+main{
+max-width: 1349px;
+}   /*ADD*/ 
+
+.menu_card{
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+    .menu_card__plat_card{
+        width: 32%;
     }
-    
+        .menu_card__title{
+            width: 100%;
+        }
+        .resto_titre{
+            justify-content:center;
+        }    
+
+    .fa-arrow-left:hover +.accueil_display{
+        display: flex;
+        animation: accueilAppear 0.8s;
+    }
+}
